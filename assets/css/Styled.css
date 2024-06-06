@@ -1,0 +1,291 @@
+body{
+
+color: var();
+font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+.container{
+    max-width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+
+
+
+}
+.logo{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: brown;
+    text-decoration: none;
+}
+
+.logo span{
+
+        color: black;
+}
+
+.navbar{
+
+    display: flex;
+    column-gap: 2rem;
+
+
+}
+
+.navbar a{
+
+        color: black;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+}
+
+.navbar a:hover, .navbar :active{
+  
+      color: brown;
+      border-bottom: 3px solid black;
+      
+      
+
+}
+
+.inicio{
+
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: url(./assets/images/chave-na-mao_87394-30142.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+
+}
+.initext{
+    padding-left: 100px;
+
+}
+
+.initext h1 {
+
+     font-size: 2.4rem;
+
+}
+
+.initext span{
+
+    color: brown;
+
+}
+
+.initext p{
+
+    font-size: 0.938rem;
+    font-weight: 300;
+    margin: 0.5rem 0 1.2rem;
+
+}
+.btn{
+     
+    padding: 10px 22px;
+    background-color: red;
+    color: aliceblue;
+    font-weight: 400;
+    border-radius: 300px;
+}
+.btn:hover{
+    background: #fd052f;
+
+}
+.heading{
+
+    text-align: center;
+
+}
+
+.heading span{
+
+    font-weight: 500;
+    color: #fd052f;
+
+}
+
+.heading p{
+
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+
+.carros-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.carros-container .box{
+
+    flex: 1 1 17rem;
+    position: relative;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+.carros-container .box img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.carros-container .box img:hover{
+
+transform: scale(1.1);
+transition: 0.5s;
+
+}
+
+.carros-container .box h2{
+
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    background: rgb(255, 255, 255);
+    padding: 9px;
+    border-radius: 0.5rem;
+
+}
+
+.carros-container .box:hover h2{
+
+    background: rgb(233, 4, 4);
+    color: #ffffff;
+}
+
+.sobre{
+     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+
+
+}
+.sobreimg{
+  flex: 1 1 21rem;
+
+}
+
+.sobretexto{
+
+    flex: 1 1 21rem;
+}
+
+.parts-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+
+
+}
+
+.parts-container .box{
+
+    flex: 1 1 17rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+    border-radius: 0.5rem;
+
+
+}
+
+.parts-container .box img{
+
+    width: 100%;
+    height: 150%;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+
+
+
+}
+
+.parts-container .box h3{
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fd052f;
+
+}
+
+
+.parts-container .box .bx{
+    color: #fd052f;
+    margin: 0.8rem 0;
+
+     
+
+}
+
+
+.parts-container .box .btn{
+
+    max-width: 120px;
+    text-decoration: none;
+
+}
+
+
+.parts-container .box .detalhes{
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: #000000;
+    
+}
+
+.parts-container .box .detalhes:hover{
+
+    color: #be1b1b;
+    text-decoration: underline;
+
+}

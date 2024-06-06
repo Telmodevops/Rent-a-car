@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car - Formulário de Venda</title>
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#installmentsWrapper {
+    display: none;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <h1>Formulário de Venda - Rent a Car</h1>
+        <form id="rentForm">
+            <label for="name">Nome completo:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="name">É Cliente Salario Bfa?:</label>
+            <input type="text" id="client" name="client" required>
+
+            <label for="name">Sexo:</label>
+            <input type="text" id="sexo" name="sexo" required>
+
+            <label for="name">NIF:</label>
+            <input type="text" id="nF" name="nF" required>
+
+            <label for="name">Numero da conta:</label>
+            <input type="text" id="nb" name="nb" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="carModel">Modelo do Carro:</label>
+            <input type="text" id="carModel" name="carModel" required>
+
+            <label for="paymentMethod">Método de Pagamento:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="full">Pagamento à Vista</option>
+                <option value="installments">Parcelado</option>
+            </select>
+
+            <div id="installmentsWrapper" style="display: none;">
+                <label for="installments">Número de Parcelas:</label>
+                <input type="number" id="installments" name="installments" min="2" max="12">
+            </div>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                Li e concordo com os Termos de Responsabilidade.
+            </label>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </div>
+
+    <script>
+        
+    document.addEventListener("DOMContentLoaded", function() {
+    const carModels = ["Carro 1", "Carro 2", "Carro 3"]; // Substitua por uma lista de carros disponíveis
+
+    const carModelSelect = document.getElementById("carModel");
+
+    carModels.forEach(function(carModel) {
+        const option = document.createElement("option");
+        option.textContent = carModel;
+        carModelSelect.appendChild(option);
+    });
+
+    const paymentMethodSelect = document.getElementById("paymentMethod");
+    const installmentsWrapper = document.getElementById("installmentsWrapper");
+
+    paymentMethodSelect.addEventListener("change", function() {
+        if (paymentMethodSelect.value === "installments") {
+            installmentsWrapper.style.display = "block";
+        } else {
+            installmentsWrapper.style.display = "none";
+        }
+    });
+});
+
+
+
+
+    </script>
+
+
+</body>
+</html>
